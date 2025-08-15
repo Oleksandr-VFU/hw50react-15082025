@@ -1,4 +1,5 @@
 import React, {useState, useMemo} from "react";
+import styles from './UserList.module.css';
 
 const generateUsers = () => {
     const users = [];
@@ -20,12 +21,14 @@ const UserList = () => {
     }, [search, users]);
 
     return (
-        <div>
-            <h2>Список користувачів</h2>
-            <input type="text" placeholder="Пошук..." value={search} onChange={(e) => setSearch(e.target.value)} />
-            <ul>
+        <div className={styles.container}>
+            <h2 className={styles.title}>Список користувачів</h2>
+            <input type="text" placeholder="Пошук..." value={search} onChange={(e) => setSearch(e.target.value)} className={styles.searchInput} />
+            <ul className={styles.list}>
                 {filteredUsers.slice(0, 50).map(user => (
-                    <li key={user.id}>{user.name}</li>
+                    <li key={user.id} className={styles.listItem}>
+                        <span className={styles.username}>{user.name}</span>
+                    </li>
                 ))}
             </ul>
         </div>
