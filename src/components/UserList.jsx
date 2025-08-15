@@ -16,7 +16,7 @@ const UserList = () => {
     const filteredUsers = useMemo(() => {
         console.log('Виконується фільтрація користувачів...');
         return users.filter(user =>
-            user.name.toLowerCase().includes(search.toLocaleLowerCase())
+            user.name.toLowerCase().includes(search.toLowerCase())
         )
     }, [search, users]);
 

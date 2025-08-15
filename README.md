@@ -1,12 +1,62 @@
-# React + Vite
+# Оптимізація React-додатків через мемоізацію складних обчислень та великих об'ємів даних
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Мета завдання
 
-Currently, two official plugins are available:
+Розвинути навички використання мемоізації в React, демонструючи її застосування у функціональних компонентах для оптимізації продуктивності.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Реалізація
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Ініціалізація проєкту
+
+- Проєкт було ініціалізовано за допомогою команди:
+    ```sh
+    npm create vite@latest hw13-react-memo-app -- --template react
+    ```
+- Далі виконано встановлення необхідних залежностей для роботи з React.
+
+### 2. Створення компоненту
+
+- У директорії `src/components` створено файл **UserList.jsx**.
+- Реалізовано компонент, який демонструє використання мемоізації через хук `useMemo`.
+- Застосовано `useMemo` для:
+    - Меморизації складних обчислень, які залежать від великого об'єму даних.
+    - Зменшення кількості непотрібних перерахунків при повторному рендері компонента.
+- Компонент імітує роботу з великою кількістю користувачів, фільтруючи їх за певними критеріями, що потребують обчислень.
+
+---
+
+Демо додатку розгорнуто на платформі **Vercel**: [https://hw50react-15082025.vercel.app/](https://hw48react-15082025.vercel.app/)
+
+Вихідний код додатку знаходиться на **GitHub**: [GitHub репозиторій](https://github.com/Oleksandr-VFU/hw50react-15082025.git)
+
+## Технології
+
+- React
+- useMemo
+
+---
+
+## Встановлення та запуск
+
+1. Клонуйте репозиторій та перейдіть у директорію проєкту:
+    ```sh
+    git clone https://github.com/Oleksandr-VFU/hw50react-15082025.git
+    cd hw13-react-memoization-app
+    ```
+2. Встановіть залежності:
+    ```sh
+    npm install
+    ```
+3. Запустіть застосунок у режимі розробки:
+    ```sh
+    npm run dev
+    ```
+
+---
+
+## Результат
+
+Компонент **UserList** демонструє, як мемоізація дозволяє ефективно працювати з великими наборами даних, зменшуючи навантаження на рендеринг та покращуючи продуктивність React-додатків.
+
