@@ -27,7 +27,7 @@
 
 ---
 
-Демо додатку розгорнуто на платформі **Vercel**: [https://hw50react-15082025.vercel.app/](https://hw48react-15082025.vercel.app/)
+Демо додатку розгорнуто на платформі **Vercel**: [https://hw50react-15082025.vercel.app/](https://hw50react-15082025.vercel.app/)
 
 Вихідний код додатку знаходиться на **GitHub**: [GitHub репозиторій](https://github.com/Oleksandr-VFU/hw50react-15082025.git)
 
